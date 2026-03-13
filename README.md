@@ -47,6 +47,36 @@ The dataset used in this project is a CSV file containing sales-related informat
 
 ---
 
+<h3>🌗 Dynamic Theme Switching (Dark / Light Mode)</h3>
+
+<p>
+This dashboard includes a dynamic theme toggle that allows users to switch between 
+<b>Dark Mode</b> and <b>Light Mode</b> for a better viewing experience. A dedicated 
+<b>Theme table</b> was created containing a value used to control the dashboard theme.
+</p>
+
+<p>
+Using a DAX conditional expression, visual colors are dynamically updated across the 
+entire dashboard based on the selected theme.
+</p>
+
+<pre>
+Theme Color = IF(SUM(Theme[Value]) = 1, "Dark Color", "Light Color")
+</pre>
+
+<p>
+The measure is applied to visual elements such as backgrounds, fonts, and chart colors 
+through Power BI’s <b>Conditional Formatting → Format by Field Value</b> option, allowing 
+all visuals to automatically update when the theme button is toggled.
+</p>
+
+<p>
+This feature improves dashboard usability and demonstrates the use of 
+<b>DAX-driven conditional formatting</b> to create a more interactive user interface.
+</p>
+
+---
+
 <h2>Walkthrough of Key Visual</h2>
 
 <ul>
